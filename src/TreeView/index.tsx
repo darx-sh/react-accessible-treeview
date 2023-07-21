@@ -27,7 +27,6 @@ import {
   onComponentBlur,
   propagatedIds,
   propagateSelectChange,
-  scrollToRef,
   symmetricDifference,
   usePrevious,
   usePreviousData,
