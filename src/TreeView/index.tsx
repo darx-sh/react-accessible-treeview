@@ -17,7 +17,6 @@ import {
 } from "./types";
 import {
   difference,
-  focusRef,
   getAccessibleRange,
   getDescendants,
   getLastAccessible,
