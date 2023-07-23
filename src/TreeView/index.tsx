@@ -87,7 +87,7 @@ const useTree = ({
   propagateSelectUpwards,
 }: IUseTreeProps) => {
   const treeParentNode = getTreeParent(data);
-  const [state, dispatch] = useReducer(treeReducer, {
+  const [state, dispatch] = useReducer<(state: ITreeViewState, action: TreeViewAction) => ITreeViewState>(treeReducer, {
     selectedIds: new Set<NodeId>(controlledSelectedIds || defaultSelectedIds),
     controlledIds: new Set<NodeId>(controlledSelectedIds),
     tabbableId: treeParentNode.children[0],
