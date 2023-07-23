@@ -17,7 +17,7 @@ import {
 } from "./types";
 import {
   difference,
-  focusRef,
+  // focusRef,
   getAccessibleRange,
   getDescendants,
   getLastAccessible,
@@ -28,7 +28,7 @@ import {
   onComponentBlur,
   propagatedIds,
   propagateSelectChange,
-  scrollToRef,
+  // scrollToRef,
   symmetricDifference,
   usePrevious,
   usePreviousData,
@@ -384,19 +384,19 @@ const useTree = ({
   ]);
 
   //Focus
-  useEffect(() => {
-    if (lastInteractedWith == null) return;
-    else if (
-      tabbableId != null &&
-      nodeRefs?.current != null &&
-      leafRefs?.current != null
-    ) {
-      const tabbableNode = nodeRefs.current[tabbableId];
-      const leafNode = leafRefs.current[lastInteractedWith];
-      scrollToRef(leafNode);
-      focusRef(tabbableNode);
-    }
-  }, [tabbableId, nodeRefs, leafRefs, lastInteractedWith]);
+  // useEffect(() => {
+  //   if (lastInteractedWith == null) return;
+  //   else if (
+  //     tabbableId != null &&
+  //     nodeRefs?.current != null &&
+  //     leafRefs?.current != null
+  //   ) {
+  //     const tabbableNode = nodeRefs.current[tabbableId];
+  //     const leafNode = leafRefs.current[lastInteractedWith];
+  //     scrollToRef(leafNode);
+  //     focusRef(tabbableNode);
+  //   }
+  // }, [tabbableId, nodeRefs, leafRefs, lastInteractedWith]);
 
   // The "as const" technique tells Typescript that this is a tuple not an array
   return [state, dispatch] as const;
